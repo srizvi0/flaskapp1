@@ -1,10 +1,9 @@
-FROM python:3.9
+FROM python:3.12
 
-WORKDIR /GITPROJECT
+WORKDIR /App
 
-COPY requirements.txt requirements.txt 
-RUN pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 
-COPY . .
+COPY / .
 
-CMD [ "python", "App.py"]
+CMD ["py", "App.py"]
